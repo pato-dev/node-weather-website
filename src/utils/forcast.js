@@ -14,6 +14,8 @@ const forcast = (latitude, longitude, callback) => {
             callback('Unable to find location. Try another coordinate.', undefined)
         } else {
             callback(undefined, body.current.weather_descriptions[0] + '. It is currently ' + body.current.temperature + 'degree out. It feels like there is a ' + body.current.precip + '% chance of rain.')
+
+            callback(undefined, ' It is currently ' + body.current.temperature + 'degree out, with the  visibility of ' + body.current.visibility + 'so it is a ' + body.current.is_day + ' . ')
         }
     })
 }
